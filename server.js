@@ -41,8 +41,7 @@ Une très mauvaise solution signifie qu'il ne réussit aucune étape.
 
 Pour ce critère, indique :
 - Si le participant répond au critère (oui / partiellement / non)
-- Une note de 1 à 5 (1 = très mauvais, 5 = excellent)
-- Un commentaire constructif et encourageant en 2-3 phrases
+- Un commentaire constructif en 2-3 phrases
 
 Sois bienveillant, précis et pédagogique. Réponds en français.`;
 
@@ -73,8 +72,7 @@ d'expliquer ces aspects.
 
 Pour ce critère, indique :
 - Si le participant répond au critère (oui / partiellement / non)
-- Une note de 1 à 5 (1 = très mauvais, 5 = excellent)
-- Un commentaire constructif et encourageant en 2-3 phrases
+- Un commentaire constructif en 2-3 phrases
 
 Sois bienveillant, précis et pédagogique. Réponds en français.`;
 
