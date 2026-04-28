@@ -43,7 +43,7 @@ Format de réponse : Commentaire : [ton commentaire]`
     });
     const data = await response.json();
     const feedback = data.choices[0].message.content;
-    res.json({ feedback });
+    res.json({ feedback: feedback });
   } catch (error) {
     res.status(500).json({ error: 'Erreur serveur' });
   }
@@ -89,7 +89,7 @@ Format de réponse : Commentaire : [ton commentaire]`
     });
     const data = await response.json();
     const feedback = data.choices[0].message.content;
-    res.json({ feedback });
+    res.json({ feedback: feedback });
   } catch (error) {
     res.status(500).json({ error: 'Erreur serveur' });
   }
