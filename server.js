@@ -101,7 +101,17 @@ Format de réponse : [ton commentaire]`;
 
 // ─── ENDPOINT SANS FEEDBACK ──────────────────────────────────────────────────
 app.post('/sans-feedback', function(req, res) {
-  res.json({ feedback: 'Merci pour votre réponse.' });
+  const reponse_participant = req.body.reponse_participant;
+  if (!reponse_participant) {
+    return res.status(400).json({ error: 'Réponse manquante' });
+  }
+  const systemPrompt = `Tu es un assistant pédagogique bienveillant. Fournis un retour constructif et encourageant sur cette résolution de problème de probabilités conditionnelles et du théorème de Bayes. Explique ce qui est bien fait et ce qui pourrait être amélioré, en 2-3 phrases en français.`;
+  appellerOpenAI(systemPrompt, reponse_participant, function(err, feedback) {
+    if (err) {
+      return res.status(500).json({ error: err });
+    }
+    res.json({ feedback: feedback });
+  });
 });
 
 // ─── DÉMARRAGE ───────────────────────────────────────────────────────────────
